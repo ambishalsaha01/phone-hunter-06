@@ -1,4 +1,4 @@
-// Search Phone Field
+// <<<<<<<<<<<<<<<Search Phone Field>>>>>>>>>>>>>>>
 const loadPhone = () => {
     const searchInput = document.getElementById('search-input')
     const searchInputValue = searchInput.value;
@@ -9,14 +9,12 @@ const loadPhone = () => {
     .then(data => displayPhone(data.data))
 }
 
-// Display Phone Field
+// <<<<<<<<<<<<<<<Display Phone Field>>>>>>>>>>>>>>>
 const displayPhone = phones => {
-    // console.log(phones.data)
     for(const phone of phones){
-        // console.log(phone)
         const searchResult = document.getElementById('search-result');
         const div = document.createElement('div');
-        div.classList.add('col');
+        div.classList.add('col-12', 'col-md-6', 'col-lg-4');
         div.innerHTML = `
         <div class="card">
             <img src="${phone.image}" class="img-fluid" alt="Mobile Phone">
@@ -31,7 +29,7 @@ const displayPhone = phones => {
     }
 }
 
-// Phone Details Field
+// <<<<<<<<<<<<<<<Phone Details Field>>>>>>>>>>>>>>>
 const PhoneDetails = phone => {
     const url = `https://openapi.programming-hero.com/api/phone/${phone}`;
     fetch(url)
@@ -39,7 +37,7 @@ const PhoneDetails = phone => {
     .then(data => loadPhoneDetail(data))
 }
 
-// Load Phone Details Field
+// <<<<<<<<<<<<<<<Load Phone Details Field>>>>>>>>>>>>>>>
 const loadPhoneDetail = info => {
     // console.log(info)
     const phoneDetails = document.getElementById('phone-details');
