@@ -12,7 +12,14 @@ const loadPhone = () => {
 // <<<<<<<<<<<<<<<Display Phone Field>>>>>>>>>>>>>>>
 const displayPhone = phones => {
     const searchResult = document.getElementById('search-result');
-    searchResult.textContent = ''
+    searchResult.textContent = '';
+    const noResult = document.getElementById('no-result');
+    if(phones.length == 0){
+        noResult.style.display = 'block'
+    }
+    else{
+        noResult.style.display = 'none'
+    }
     phones.forEach(phone =>{
         const div = document.createElement('div');
         div.classList.add('col-12', 'col-md-6', 'col-lg-4');

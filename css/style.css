@@ -18,6 +18,9 @@ h1{
     text-transform: uppercase;
 }
 
+/* ====================
+   Phone details Section
+   ==================== */
 .product-item,
 .phone-detail{
     padding: 20px;
@@ -41,4 +44,14 @@ h1{
     font-size: 18px;
     color: #2f3640;
     font-weight: 700;
+}
+
+/* ====================
+   No Result Found
+   ==================== */
+#no-result{
+    font-size: 18px;
+    color: #2f3640;
+    font-weight: 500;
+    display: none;
 }
